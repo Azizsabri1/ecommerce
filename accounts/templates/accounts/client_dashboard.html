@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}Client Dashboard{% endblock %}
+{% block content %}
+<div class="text-center">
+    <h2 class="mb-4">Welcome back, {{ user.username }}! 👋</h2>
+</div>
+
+<div class="row g-4 justify-content-center">
+    <div class="col-md-4">
+        <div class="card bg-dark text-light shadow-sm">
+            <div class="card-body text-center">
+                <h5 class="card-title">🛒 My Cart</h5>
+                <p class="card-text">View and manage your shopping cart.</p>
+                <a href="{% url 'cart' %}" class="btn btn-outline-primary">Go to Cart</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card bg-dark text-light shadow-sm">
+            <div class="card-body text-center">
+                <h5 class="card-title">🧾 My Orders</h5>
+                <p class="card-text">Track your order history and status.</p>
+                <a href="{% url 'my_orders' %}" class="btn btn-outline-info">View Orders</a>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card bg-dark text-light shadow-sm">
+            <div class="card-body text-center">
+                <h5 class="card-title">⚙️ My Profile</h5>
+                <p class="card-text">Edit your account information and password.</p>
+                <a href="{% url 'profile' %}" class="btn btn-outline-secondary">Manage Profile</a>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
